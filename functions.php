@@ -1,21 +1,13 @@
 <?php
 
-// This file loads the Google fonts used in this theme
-require get_stylesheet_directory() . '/includes/google-fonts.php';
-
 // This file contains search form improvements
 require get_stylesheet_directory() . '/includes/class-search-form.php';
 
-add_action( 'genesis_setup', 'utility_pro_setup', 15 );
+add_action( 'genesis_setup', 'jsg_theme_setup', 15 );
 /**
  * Theme setup.
- *
- * Attach all of the site-wide functions to the correct hooks and filters. All
- * the functions themselves are defined below this setup function.
- *
- * @since 1.0.0
  */
-function utility_pro_setup() {
+function jsg_theme_setup() {
 
 	// Add HTML5 markup structure
 	add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
@@ -49,8 +41,7 @@ function utility_pro_setup() {
 	add_theme_support(
 		'genesis-menus',
 		array(
-			'primary'   => __( 'Primary Navigation Menu', 'utility-pro' ),
-			'footer'    => __( 'Footer Navigation Menu', 'utility-pro' ),
+			'primary'   => __( 'Primary Navigation Menu', 'jsg-theme' ),
 		)
 	);
 	
@@ -77,9 +68,6 @@ function utility_pro_setup() {
 	// Add featured image above page
 	add_action( 'genesis_before_entry', 'featured_page_image', 8 );
 
-	// Add a navigation area above the site footer
-	add_action( 'genesis_before_footer', 'utility_pro_do_footer_nav' );
-
 	// Remove Genesis archive pagination (Genesis pagination settings still apply)
 	remove_action( 'genesis_after_endwhile', 'genesis_posts_nav' );
 
@@ -96,12 +84,6 @@ function utility_pro_setup() {
 	// Apply search form enhancements (accessibility)
 	add_filter( 'get_search_form', 'utility_pro_get_search_form', 25 );
 
-	// Load files in admin
-	if ( is_admin() ) {
-
-		// Add suggested plugins nag
-		include get_stylesheet_directory() . '/includes/suggested-plugins.php';
-	}
 }
 
 function featured_page_image() {
@@ -111,35 +93,17 @@ function featured_page_image() {
 	echo '</figure>';
 }
 
-add_filter( 'genesis_footer_creds_text', 'utility_pro_footer_creds' );
+add_filter( 'genesis_footer_creds_text', 'jsg_theme_footer_creds' );
 /**
  * Change the footer text.
- *
- * @since  1.0.0
- *
- * @return null Return early if not a single post or post does not have thumbnail.
  */
-function utility_pro_footer_creds( $creds ) {
-	return '<p>Copyright &copy; ' . date("Y") . ' &#8226; JSG Construction</p><p>All content and photography are owned by JSG Construction. All rights reserved.</p>';
+function jsg_theme_footer_creds( $creds ) {
+	return '<p>Copyright &copy; ' . date("Y") . ' &#8226; JSG Construction<br>All content and photography are owned by JSG Construction. All rights reserved.</p>';
 }
 
-add_filter( 'genesis_author_box_gravatar_size', 'utility_pro_author_box_gravatar_size' );
-/**
- * Customize the Gravatar size in the author box.
- *
- * @since 1.0.0
- *
- * @return integer Pixel size of gravatar.
- */
-function utility_pro_author_box_gravatar_size( $size ) {
-	return 96;
-}
 
 // Add theme widget areas
 include get_stylesheet_directory() . '/includes/widget-areas.php';
-
-// Add footer navigation components
-include get_stylesheet_directory() . '/includes/footer-nav.php';
 
 // Add scripts to enqueue
 include get_stylesheet_directory() . '/includes/enqueue-assets.php';

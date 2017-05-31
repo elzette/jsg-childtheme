@@ -1,7 +1,6 @@
 <?php
 /**
  * Template Name: Services
- *
  */
  
 add_action( 'genesis_meta', 'jsg_servicepage_setup' );

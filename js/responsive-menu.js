@@ -1,22 +1,22 @@
-/* global utilityResponsiveL10n:false */
+
 ( function( window, $, undefined ) {
 	'use strict';
 	var primaryButton, subMenuButton;
 
-	primaryButton = $( '<button>' + utilityResponsiveL10n.buttonText + '</button>' )
+	primaryButton = $( '<button>Menu</button>' )
 		.attr( 'role', 'button' )
 		.attr( 'aria-pressed', false )
 		.attr( 'aria-expanded', false )
 		.attr( 'aria-controls', $( '.menu-primary' ).attr( 'id' ) )
-		.attr( 'aria-label', utilityResponsiveL10n.buttonLabel )
+		.attr( 'aria-label', 'Menu' )
 		.attr( 'class', 'menu-toggle menu-toggle-primary' );
 	$( '.menu-primary' ).before( primaryButton );
 
 	// Sub-level menu items
-	subMenuButton = $( '<button>' + utilityResponsiveL10n.subButtonText + '</button>' )
+	subMenuButton = $( '<button>Menu</button>' )
 		.attr( 'role', 'button' )
 		.attr( 'aria-pressed', false )
-		.attr( 'aria-label', utilityResponsiveL10n.subButtonLabel )
+		.attr( 'aria-label', 'Menu' )
 		.attr( 'class', 'menu-toggle sub-menu-toggle' );
 	$( '.sub-menu' ).before( subMenuButton );
 

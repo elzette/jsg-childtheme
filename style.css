@@ -685,7 +685,7 @@ Content Area
 .archive-single .entry-title {margin-bottom: 30px;}
 .archive-single h1:after {display: none;}
 .archive-single .featured-image {background-position: center center; background-size: cover; height: 210px; position: relative; overflow: hidden; width: 100%; z-index: 3;}
-.archive-single .entry {color: #fff; padding: 6%; position: relative; top:40px; z-index: 5;}
+.archive-single .entry {color: #fff; padding: 6%; position: relative; top:40px; z-index: 4;}
 .category-residential .archive-title, .category-commercial .archive-title, .category-alterations .archive-title, .single .archive-title {
 	color: white;
 	font-size: 32px;

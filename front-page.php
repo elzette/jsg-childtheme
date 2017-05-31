@@ -1,20 +1,10 @@
 <?php
 /**
- * Front page for the Utility Pro theme
- *
- * @package Utility_Pro
- * @author  Carrie Dils
- * @license GPL-2.0+
- *
+ * Front page
  */
 
 add_action( 'genesis_meta', 'home_jsg_homepage_setup' );
-/**
- * Set up the homepage layout by conditionally loading sections when widgets
- * are active.
- *
- * @since 1.0.0
- */
+
 function home_jsg_homepage_setup() {
 	
 	$home_sidebars = array(

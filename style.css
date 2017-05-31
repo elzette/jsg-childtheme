@@ -427,7 +427,7 @@ Widgets
 .home-welcome, .home-slider {position: relative;}
 .home-welcome .widget, .services .entry, .archive-single .entry {
 	background-color: rgb(5, 25, 50);
-	background-color: rgba(5, 25, 50, 0.9);
+	background-color: rgba(5, 25, 50, 0.85);
 	color: #fff;
 	padding: 6% 6% 3% 6%;
 }
@@ -1062,7 +1062,7 @@ Media Queries
 	.archive-single .featured-image:hover {opacity: 1;}
 	a .service-project figure:after, .gallery a:after {
 		background-color: rgb(5, 25, 50);
-		background-color: rgba(5, 25, 50, 0.9);
+		background-color: rgba(5, 25, 50, 0.85);
 		content: "";
 		font-family: 'Oswald', sans-serif;
 		font-weight: 300; 
@@ -1197,7 +1197,9 @@ Media Queries
 		position: relative;
 		z-index: 10;
 	}
-	.site-header .wrap {background: #051f40;}
+	.site-header .wrap {
+		background-color: #051f40;
+	}
 	.header-widget-area .search-form {
 		float: right;
 		margin-top: 0;
@@ -1301,7 +1303,7 @@ Media Queries
 		min-height: 576px;
 	}
 	.home-welcome .widget, .services .entry, .archive-single .entry {
-		box-shadow: -40px 0 0 rgba(5, 25, 50, 0.9);
+		box-shadow: -40px 0 0 rgba(5, 25, 50, 0.85);
 		margin: 65px 0 0 0;
 		padding: 40px 40px 8px 0;
 		position: absolute;

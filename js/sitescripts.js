@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 			$('.site-header').removeClass('scroll');
 		}
 	});
-		
+	
 	$('.home-slider').unslider({
 		autoplay: true,
 		speed: 1200,

@@ -14,10 +14,6 @@
 		- Baseline Normalize
 		- Box Sizing
 		- Float Clearing
-	- Color Options
-		- Purple
-		- Green
-		- Red
 	- Defaults
 		- Typographical Elements
 		- Headings
@@ -34,16 +30,7 @@
 		- Genesis
 		- Titles
 	- Widgets
-		- Utility Bar
 		- Home Welcome
-		- Home Gallery
-		- Call to Action
-		- Featured Page and Featured Post
-	- Plugins
-		- Better Font Awesome
-		- Genesis eNews Extended
-		- Gravity Forms
-		- Jetpack
 	- Site Header
 		- Title Area
 		- Widget Area
@@ -52,15 +39,18 @@
 		- Header Navigation
 		- Primary & Secondary Navigation
 	- Content Area
+		- Projects
+		- Services
 		- Entries
-		- Featured Image
+		- Entry Meta
+		- Gallery
 		- Pagination
-		- Comments
 	- Sidebars
-	- Footer Widgets
-	- Site Footer
+	- Footer
 	- Accessibility Extras
 	- Media Queries
+		- min-width: 400px
+		- min-width: 600px		
 		- min-width: 768px
 		- min-width: 1024px
 		- min-width: 1140px
@@ -272,9 +262,9 @@ input[type="submit"], input[type="button"] {
 .btn svg, .button svg,
 .entry-content a.button svg,
 input[type="submit"] svg, .more-link svg {
-	fill: #90c54e;
     content: "";
     display: inline-block;
+    fill: #90c54e;
     height: 14px;
     position: relative;
     right: -4px;
@@ -402,7 +392,6 @@ Common Classes
 
 /* WordPress
 --------------------------------------------- */
-
 address {margin-bottom: 24px;}
 .avatar {float: left;}
 .alignleft .avatar {margin-right: 24px;}
@@ -433,10 +422,8 @@ img.centered, .aligncenter, img.alignleft, .wp-caption.alignleft, img.alignright
 Widgets
 ---------------------------------------------------------------------------------------------------- */
 
-
 /* Home Welcome
 --------------------------------------------- */
-
 .home-welcome, .home-slider {position: relative;}
 .home-welcome .widget, .services .entry, .archive-single .entry {
 	background-color: rgb(5, 25, 50);
@@ -448,7 +435,7 @@ Widgets
 .home-welcome p, .home-welcome .textwidget {font-size: 18px;}
 .home-welcome .wrap {position: relative;}
 .home-slider {height: 300px;}
-.home-slider .featured-image {background-size: cover; display: block; height: 300px; opacity: 0.5; overflow: hidden; position: relative; z-index: 10;}
+.home-slider .featured-image {background-size: cover; display: block; height: 300px; opacity: 0.7; overflow: hidden; position: relative; z-index: 10;}
 .home-slider .featured-image:hover {opacity: 1;}
 a.unslider-arrow.next, a.unslider-arrow.prev, .home-slider .project-info {bottom: -36px; position: absolute; z-index: 900;} 
 a.unslider-arrow.next {right: 16px;}
@@ -505,10 +492,6 @@ a.unslider-arrow.prev {left: 16px;}
 
 
 /*
-Plugins
----------------------------------------------------------------------------------------------------- */
-
-/*
 Site Header
 ---------------------------------------------------------------------------------------------------- */
 
@@ -523,12 +506,10 @@ Site Header
 	text-align: center;
 	width: 100%;
 }
-
 .site-title {
 	line-height: 1;
 	margin: 0;
 }
-
 .site-title a,
 .site-title a:hover {
 	border: 0;
@@ -536,13 +517,11 @@ Site Header
 	font-family: 'Oswald', sans-serif;
 	font-size: 28px;
 }
-
 .site-description {
- display: none;
+ 	display: none;
 }
 
 /* Logo, hide text */
-
 .header-image .site-title > a {
 	background: url('images/logo.svg') no-repeat center;
 	float: left;
@@ -553,23 +532,19 @@ Site Header
 
 /* Header Right Widget Area
 --------------------------------------------- */
-
 .site-header .widget-area {
-  float: right;
-  text-align: center;
-  width: 100%;
+  	float: right;
+  	text-align: center;
+  	width: 100%;
 }
-
 .header-widget-area .genesis-nav-menu a {
 	color: #000;
 }
-
 .header-widget-area .genesis-nav-menu a:hover,
 .header-widget-area .genesis-nav-menu .current-menu-item > a,
 .header-widget-area .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
 	color: #666;
 }
-
 .header-widget-area .genesis-nav-menu .sub-menu a {
 	background-color: #eee;
 }
@@ -577,21 +552,17 @@ Site Header
 /*
 Site Navigation
 ---------------------------------------------------------------------------------------------------- */
-
 .genesis-nav-menu > .first > a {
 	padding-left: 0;
 }
-
 .genesis-nav-menu > .last > a {
 	padding-right: 0;
 }
-
 .genesis-nav-menu .menu-item {
 	display: block;
 	position: relative;
 	text-align: left;
 }
-
 .genesis-nav-menu a {
 	color: #fff;
 	display: inline-block;
@@ -603,35 +574,28 @@ Site Navigation
 	position: relative;
 	width: 100%;
 }
-
 .genesis-nav-menu a:hover,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
 	color: #90c54e;
 }
-
 .genesis-nav-menu .sub-menu a:hover,
 .genesis-nav-menu .sub-menu a:focus {
 	outline: #aaa dotted thin;
 }
-
 .genesis-nav-menu .sub-menu .current-menu-item > a {
 	color: #90c54e;
 }
-
 .genesis-nav-menu > .menu-item > a {
 	text-transform: uppercase;
 }
-
 .genesis-nav-menu .menu-item:hover > .sub-menu {
 	left: auto;
 	opacity: 1;
 }
-
 .genesis-nav-menu .menu-item:hover {
 	position: relative;
 }
-
 .genesis-nav-menu .sub-menu {
 	background-color: #05182f;
 	clear: both;
@@ -639,20 +603,19 @@ Site Navigation
 	opacity: 1;
 	position: static;
 }
-
 .genesis-nav-menu .sub-menu a {
 	border: 0;
 }
-
 .genesis-nav-menu .sub-menu .sub-menu a {
 	padding-left: 20px;
 }
 
 /* Mobile Menu Toggle
 --------------------------------------------- */
-
 .menu-primary {display: none; padding-bottom: 24px; position: relative;}
 .menu-toggle {
+	background-color: transparent;
+	border: 0;
 	color: #fff;
 	display: block;
 	font-family: 'Oswald', sans-serif;
@@ -662,8 +625,6 @@ Site Navigation
 	overflow: hidden;
 	padding: 9px;
 	visibility: visible;
-	background-color: transparent;
-	border: 0;
 }
 .menu-toggle svg {
 	display: none;
@@ -690,18 +651,15 @@ Site Navigation
 
 /* Site Header Navigation
 --------------------------------------------- */
-
 .site-header .sub-menu {
 	border-bottom: 1px solid #051f40;
 }
-
 .site-header .sub-menu .sub-menu {
 	margin-top: -53px;
 }
 
 /* Primary & Footer Navigation
 --------------------------------------------- */
-
 .nav-primary,
 .nav-footer {
 	text-align: center;
@@ -713,7 +671,6 @@ Site Navigation
 .nav-footer .current-menu-item > a {
 	color: #90c54e;
 }
-
 .nav-primary .sub-menu a:hover {
 	color: #90c54e;
 }
@@ -721,7 +678,6 @@ Site Navigation
 /*
 Content Area
 ---------------------------------------------------------------------------------------------------- */
-
 /* Projects
 --------------------------------------------- */
 .archive-single {position: relative; z-index: 0;}
@@ -772,7 +728,7 @@ a.more-link:hover {color: white}
 .featured-image {position: relative; z-index: 5;}
 .featured-image img, a.entry-image-link img {
 	height: auto;
-	opacity: 0.5;
+	opacity: 0.7;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
@@ -807,79 +763,65 @@ a .service-project em {font-weight: 300;}
 	padding: 0 0 24px;
 	word-wrap: break-word;
 }
-
 .entry-content .attachment a,
 .entry-content .gallery a {
 	border: 0;
 }
-
 .entry-content ol,
 .entry-content ul,
 .quote-caption {
 	margin-bottom: 26px;
 }
-
 .entry-content ol ol,
 .entry-content ul ul,
 .entry-content ol ul,
 .entry-content ul ol,{
 	margin-bottom: 0;
 }
-
 .entry-content ol li,
 .entry-content ul li {
 	margin-left: 20px;
 }
-
 .entry-content ol > li {
 	list-style-type: decimal;
 }
-
 .entry-content ul > li {
 	list-style-type: disc;
 }
-
 .entry-content ul.icons-ul > li {
 	list-style-type: none;
 }
-
 .entry-content ol ol,
 .entry-content ul ul,
 .entry-content .wp-caption p {
 	margin-bottom: 0;
 }
-
 .entry-content code {
 	background-color: #051932;
 	color: #aaa;
 }
 
-/* ## Entry Meta
+/* Entry Meta
 --------------------------------------------- */
-
 .entry-meta {
 	color: #aaa;
 	font-size: 14px;
 }
-
 .entry-header .entry-meta {
 	background-color: #051932;
 	margin: 0 0 24px;
 	padding: 10px;
 	text-align: right;
 }
-
 .entry-footer .entry-meta {
 	border-top: 2px solid #aaa;
 	margin: 0;
 	padding: 32px 0 8px;
 }
-
 .entry-comments-link::before {
 	content: "\2014";
 	margin: 0 6px 0 2px;
 }
-
 .entry-categories,
 .entry-tags {
 	display: block;
@@ -904,79 +846,15 @@ a .service-project em {font-weight: 300;}
 .gallery img:hover {}
 .gallery-caption {display: block; margin-left: 0;}
 
-
-/* Tables
---------------------------------------------- */
-table {margin-bottom: 40px; max-width: 100%;}
-th {text-align: left;}
-.table {margin-bottom: 40px; width: 100%;}
-.table > thead > tr > th,
-.table > tbody > tr > th,
-.table > tfoot > tr > th,
-.table > thead > tr > td,
-.table > tbody > tr > td,
-.table > tfoot > tr > td {
-	padding: 8px;
-	line-height: 1.428571429;
-	vertical-align: top;
-	border-top: 1px solid #ddd;
-}
-.table > thead > tr > th {
-	vertical-align: bottom;
-	border-bottom: 2px solid #ddd;
-}
-.table > caption + thead > tr:first-child > th,
-.table > colgroup + thead > tr:first-child > th,
-.table > thead:first-child > tr:first-child > th,
-.table > caption + thead > tr:first-child > td,
-.table > colgroup + thead > tr:first-child > td,
-.table > thead:first-child > tr:first-child > td {
-	border-top: 0;
-}
-.table > tbody + tbody {border-top: 2px solid #ddd;}
-.table .table {background-color: #fff;}
-.table-condensed > thead > tr > th,
-.table-condensed > tbody > tr > th,
-.table-condensed > tfoot > tr > th,
-.table-condensed > thead > tr > td,
-.table-condensed > tbody > tr > td,
-.table-condensed > tfoot > tr > td {
-	padding: 5px;
-}
-.table-bordered {border: 1px solid #ddd;}
-.table-bordered > thead > tr > th,
-.table-bordered > tbody > tr > th,
-.table-bordered > tfoot > tr > th,
-.table-bordered > thead > tr > td,
-.table-bordered > tbody > tr > td,
-.table-bordered > tfoot > tr > td {
-	border: 1px solid #ddd;
-}
-.table-bordered > thead > tr > th,
-.table-bordered > thead > tr > td {
-	border-bottom-width: 2px;
-}
-.table-striped > tbody > tr:nth-child(odd) > td,
-.table-striped > tbody > tr:nth-child(odd) > th {
-	background-color: #eaeaea;
-}
-.table-hover > tbody > tr:hover > td,
-.table-hover > tbody > tr:hover > th {
-	background-color: #f5f5f5;
-}
-
 /* Pagination
 --------------------------------------------- */
-
 .pagination,
 .posts-navigation {
 	margin-bottom: 30px;
 }
-
 .pagination .nav-links {
 	display: inline;
 }
-
 .pagination .nav-links a,
 .pagination .nav-links .current {
 	background: #051932;
@@ -985,74 +863,18 @@ th {text-align: left;}
 	display: inline-block;
 	padding: 8px 12px;
 }
-
 .pagination .nav-links a:hover {
 	background: #aaa;
 	color: #051932;
 }
-
 .pagination .nav-links .current {
 	background: #555;
 	border: 1px solid #fff;
 	color: #90c54e;
 	cursor: none;
 }
-
 .entry-pagination {
 	margin: 30px 0;
-}
-
-/* Comments
---------------------------------------------- */
-
-.comment-respond,
-.entry-comments,
-.entry-pings {
-	background: #fff;
-	padding: 40px;
-	margin-bottom: 40px;
-}
-
-.comment-respond input[type="email"],
-.comment-respond input[type="text"],
-.comment-respond input[type="url"] {
-	width: 50%;
-}
-
-.comment-respond label {
-	display: block;
-	margin-right: 12px;
-}
-
-.entry-comments ul.children {
-	margin-left: 40px;
-}
-
-.comment-list li,
-.ping-list li {
-	list-style-type: none;
-	margin-top: 24px;
-}
-
-.comment-meta,
-.entry-comments
-.comment,
-.entry-comments .comment-reply {
-	margin-bottom: 40px;
-}
-
-p.form-submit,
-.entry-comments .children .comment,
-.entry-comments .comment-author {
-	margin-bottom: 0;
-}
-
-.comment .avatar {
-	margin: 0 16px 24px 0;
-}
-
-.form-allowed-tags {
-	font-size: 14px;
 }
 
 /*
@@ -1219,7 +1041,7 @@ Media Queries
 		width: 33.333333%;
 	}
 	.home-services .wrap {width: 100%;}
-	.home-services figure {background-size: auto 100%; opacity: 0.5;}
+	.home-services figure {background-size: auto 100%; opacity: 0.7;}
 	.home-slider .project-info {bottom: 27px; left: 145px; text-align: left;}
 	.service-name {color: #fff; display: inline-block;}
 	.service-content {padding-top: 0; text-align: left;}
@@ -1236,7 +1058,7 @@ Media Queries
 	.entry {padding: 40px 0 24px;}
 	.nav-previous {margin-left: -49px;}
 	.nav-next {margin-right: -49px;}
-	.archive-single .featured-image {height: 384px; opacity: 0.6;}
+	.archive-single .featured-image {height: 384px; opacity: 0.7;}
 	.archive-single .featured-image:hover {opacity: 1;}
 	a .service-project figure:after, .gallery a:after {
 		background-color: rgb(5, 25, 50);

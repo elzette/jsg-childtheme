@@ -1,7 +1,15 @@
 <?php
+/**
+ * JSG Construction.
+ *
+ * @package      jsg-childtheme
+ * @author       Semblance
+ */
 
+/**
+ * Register theme widgets.
+ */
 function jsg_register_widget_areas() {
-
 	$widget_areas = array(
 		array(
 			'id'          => 'jsg-home-welcome',
